@@ -1,0 +1,39 @@
+PORTFOLIO CONTENT PLAN
+
+1. NAME & ROLE
+- Name:John Probus Sr
+- Role title: Front-End Developer
+
+2. VALUE STATEMENT
+- Sentence: I build responsive, mobile-first web interfaces using modern JavaScript and React, with a focus on clarity and usability.
+
+3. PROJECTS TO FEATURE 
+- Project 1: Digital Business Card
+  - What it is: A personal digital business card built with React and Vite, fully responsive and featuring a dark and light theme toggle.
+  - Tech used: React, Vite, HTML, CSS
+  - Why I built it: To practice building reusable React components, managing UI state, and creating a polished, responsive interface.
+
+- Project 2: Murray Hometown Homepage
+  - What it is: A mobile-first hometown landing page built with semantic HTML and modern CSS, focused on layout fundamentals and accessibility.
+  - Tech used: HTML, CSS
+  - Why I built it: To practice building responsive layouts, using semantic markup, and creating a clean, accessible user interface.
+
+- Project 3: React Flashcards
+  - What it is: An interactive flashcards application built with React that allows users to reveal answers and practice concepts in a simple, focused interface.
+  - Tech used: React, JavaScript, HTML, CSS
+  - Why I built it: To practice React fundamentals such as component structure, state management, and conditional rendering.
+
+4. SKILLS
+- Languages: HTML, CSS, JavaScript
+- Frameworks/Libraries: React
+- Tools: GitHub, Vite, VS Code
+
+5. ABOUT
+- Background: I'm a front-end developer with a background in business and a strong focus on building clean, user-friendly web interfaces.
+- How I learn: I learn by building projects from the ground up, focusing on fundamentals, refactoring code, and reinforcing concepts through repetition.
+- What I’m looking for: I'm seeking a junior front-end role where I can contribute, continue learning, and grow alongside an experienced development team.
+
+6. LINKS
+- GitHub: https://github.com/jprobussr
+- LinkedIn: https://www.linkedin.com/in/jprobussr/
+- Email: johnprobussr@gmail.com
