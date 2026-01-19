@@ -1,3 +1,7 @@
+/* =========================
+   Reset + Theme Tokens
+   ========================= */
+
 *,
 *::before,
 *::after {
@@ -13,9 +17,20 @@
   --accent-hover: #1d4ed8;
 }
 
+/* =========================
+   Base / Page Layout
+   ========================= */
+
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Arial,
+    sans-serif;
   line-height: 1.5;
   color: var(--text);
   background-color: var(--bg);
@@ -25,26 +40,66 @@ main {
   display: block;
 }
 
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 header,
 main,
 footer {
   padding: clamp(16px, 4vw, 32px);
 }
 
+section {
+  padding: 40px 0;
+}
+
+/* =========================
+   Header + Navigation
+   ========================= */
+
+header {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+header p {
+  font-size: 1.05rem;
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+nav {
+  width: 100%;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 16px 0 0;
+  margin: 8px 0 0;
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 nav a {
   text-decoration: none;
   color: var(--text);
   display: inline-block;
-  padding: 8px 10px;
+  padding: 8px 0; /* keeps mobile alignment clean */
   border-radius: 10px;
 }
 
@@ -57,32 +112,9 @@ nav a:focus-visible {
   outline-offset: 2px;
 }
 
-section {
-  padding: 40px 0;
-}
-
-.page {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-header {
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--border);
-}
-
-header h1 {
-  margin: 0;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-header p {
-  font-size: 1.05rem;
-  margin: 8px 0 0;
-  color: var(--muted);
-}
+/* =========================
+   Typography
+   ========================= */
 
 section h2 {
   margin: 0 0 12px;
@@ -91,22 +123,27 @@ section h2 {
   letter-spacing: -0.01em;
 }
 
-footer {
-  padding-top: 32px;
-  border-top: 1px solid var(--border);
-  font-size: 0.9rem;
-}
+/* =========================
+   Projects
+   ========================= */
 
-footer p {
-  margin: 0;
+.project-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 16px;
+  align-items: stretch;
 }
 
 #projects article {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 20px;
-  display: grid;
+
+  /* equal-height cards + links pinned to bottom */
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+
   transition:
     border-color 150ms ease,
     transform 150ms ease;
@@ -138,6 +175,7 @@ footer p {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 #projects a {
@@ -149,6 +187,10 @@ footer p {
 #projects a:hover {
   text-decoration: underline;
 }
+
+/* =========================
+   Skills
+   ========================= */
 
 #skills ul {
   list-style: none;
@@ -166,9 +208,17 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* =========================
+   About
+   ========================= */
+
 #about p {
   max-width: 65ch;
 }
+
+/* =========================
+   Contact
+   ========================= */
 
 #contact ul {
   list-style: none;
@@ -180,21 +230,54 @@ footer p {
   margin-bottom: 8px;
 }
 
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
 @media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header p {
+    margin-bottom: 0;
+  }
+
+  nav {
+    width: auto;
+    margin-left: auto;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  nav a {
+    padding: 8px 10px;
+  }
+
   section {
     padding: 56px 0;
   }
-}
 
-.project-grid {
-  display: grid;
-  gap: 20px;
-  margin-top: 16px;
-}
-
-@media (min-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
+    align-items: stretch;
   }
 }
