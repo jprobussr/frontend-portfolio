@@ -1,25 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="log">
+          <a href="#">John Sr</a>
+        </div>
 
-    <header></header>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a href="#contact" class="btn">Hire Me</a>
+      </div>
+    </header>
 
     <main>
-        <section id="hero"></section>
-        <section id="about"></section>
-        <section id="skills"></section>
-        <section id="projects"></section>
-        <section id="contact"></section>
+      <section id="hero" class="hero">
+        <div class="container">
+          <p class="hero-subtitle">Front-End Developer</p>
+
+          <h1 class="hero-title">Building Responsive Web Applications</h1>
+
+          <p class="hero-text">
+            I specialize in creating clean responsive user interfaces using
+            HTML, CSS, and JavaScript. Currently expanding my skills in React
+            and modern front-end development.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+      </section>
+      <section id="about"></section>
+      <section id="skills"></section>
+      <section id="projects"></section>
+      <section id="contact"></section>
     </main>
 
     <footer></footer>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
