@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -62,7 +66,7 @@ textarea {
 }
 
 section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
 }
 
 .section-title {
@@ -152,11 +156,16 @@ section {
   font-weight: 600;
   cursor: pointer;
 
-  transition: all 0.2s ease;
+  transition: all 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
   background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
 }
 
 .btn-outline {
@@ -252,6 +261,14 @@ section {
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
 }
 
 .project-title {
@@ -287,6 +304,45 @@ section {
   border-color: var(--accent);
 }
 
+.contact {
+  border-top: 1px solid var(--border);
+}
+
+.contact .container {
+  max-width: 52rem;
+}
+
+.contact-text {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-list a {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.contact-list a:hover,
+.contact-list a:focus-visible {
+  color: var(--accent);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+}
+
+.footer p {
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
 @media (max-width: 700px) {
   .header .container {
     flex-wrap: wrap;
@@ -318,5 +374,15 @@ section {
   .hero {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card {
+    height: 100%;
   }
 }
